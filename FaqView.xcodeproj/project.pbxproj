@@ -15,6 +15,7 @@
 		34E958FF1E335ABE002EDAD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E958FD1E335ABE002EDAD7 /* LaunchScreen.storyboard */; };
 		34E9590A1E335ABE002EDAD7 /* FaqViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959091E335ABE002EDAD7 /* FaqViewTests.m */; };
 		34E959151E335ABE002EDAD7 /* FaqViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959141E335ABE002EDAD7 /* FaqViewUITests.m */; };
+		34E959251E335D5B002EDAD7 /* UIView+Fold.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959241E335D5B002EDAD7 /* UIView+Fold.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		34E959101E335ABE002EDAD7 /* FaqViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaqViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E959141E335ABE002EDAD7 /* FaqViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaqViewUITests.m; sourceTree = "<group>"; };
 		34E959161E335ABE002EDAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E959231E335D5B002EDAD7 /* UIView+Fold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Fold.h"; sourceTree = "<group>"; };
+		34E959241E335D5B002EDAD7 /* UIView+Fold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Fold.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		34E958EE1E335ABE002EDAD7 /* FaqView */ = {
 			isa = PBXGroup;
 			children = (
+				34E959221E335D39002EDAD7 /* FAQ */,
 				34E958F21E335ABE002EDAD7 /* AppDelegate.h */,
 				34E958F31E335ABE002EDAD7 /* AppDelegate.m */,
 				34E958F51E335ABE002EDAD7 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				34E959161E335ABE002EDAD7 /* Info.plist */,
 			);
 			path = FaqViewUITests;
+			sourceTree = "<group>";
+		};
+		34E959221E335D39002EDAD7 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				34E959231E335D5B002EDAD7 /* UIView+Fold.h */,
+				34E959241E335D5B002EDAD7 /* UIView+Fold.m */,
+			);
+			name = FAQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E958F71E335ABE002EDAD7 /* ViewController.m in Sources */,
+				34E959251E335D5B002EDAD7 /* UIView+Fold.m in Sources */,
 				34E958F41E335ABE002EDAD7 /* AppDelegate.m in Sources */,
 				34E958F11E335ABE002EDAD7 /* main.m in Sources */,
 			);
@@ -422,7 +436,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaqView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = irshad.FaqView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaqView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = irshad.FaqView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
