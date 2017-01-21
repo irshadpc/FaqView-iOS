@@ -18,6 +18,7 @@
 		34E959251E335D5B002EDAD7 /* UIView+Fold.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959241E335D5B002EDAD7 /* UIView+Fold.m */; };
 		34E959281E33626E002EDAD7 /* ExpnadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */; };
 		34E9592A1E336310002EDAD7 /* ExpnadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */; };
+		34E9592D1E33A21B002EDAD7 /* FAQItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E9592C1E33A21B002EDAD7 /* FAQItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		34E959261E33626E002EDAD7 /* ExpnadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpnadTableViewCell.h; sourceTree = "<group>"; };
 		34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpnadTableViewCell.m; sourceTree = "<group>"; };
 		34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpnadTableViewCell.xib; sourceTree = "<group>"; };
+		34E9592B1E33A21B002EDAD7 /* FAQItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQItem.h; sourceTree = "<group>"; };
+		34E9592C1E33A21B002EDAD7 /* FAQItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 		34E959221E335D39002EDAD7 /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
+				34E9592B1E33A21B002EDAD7 /* FAQItem.h */,
+				34E9592C1E33A21B002EDAD7 /* FAQItem.m */,
 				34E959231E335D5B002EDAD7 /* UIView+Fold.h */,
 				34E959241E335D5B002EDAD7 /* UIView+Fold.m */,
 				34E959261E33626E002EDAD7 /* ExpnadTableViewCell.h */,
@@ -300,6 +305,7 @@
 				34E958F41E335ABE002EDAD7 /* AppDelegate.m in Sources */,
 				34E959281E33626E002EDAD7 /* ExpnadTableViewCell.m in Sources */,
 				34E958F11E335ABE002EDAD7 /* main.m in Sources */,
+				34E9592D1E33A21B002EDAD7 /* FAQItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

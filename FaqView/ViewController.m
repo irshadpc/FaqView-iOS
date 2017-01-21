@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ExpnadTableViewCell.h"
+#import "FAQItem.h"
 
 static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 
@@ -15,6 +16,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDictionary *faqDescription;
 @property (strong, nonatomic) NSArray *faqTitles;
+@property (strong, nonatomic) NSMutableArray *faqArray;
 @property (strong, nonatomic) NSMutableSet *expandedIndexPaths;
 @end
 
@@ -32,7 +34,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
+    _faqArray = [[NSMutableArray alloc]init];
     self.title = @"FAQ View";
     
     if (!_faqDescription) {
@@ -45,9 +47,38 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
                               };
     }
 
+    [self setupFAQWithDictinary:_faqDescription];
+}
+
+#pragma mark FAQ Model Setup with Dictiinary Method
+
+-(void)setupFAQWithDictinary:(NSDictionary *)dictnary{
+    
+    NSArray *allQuestions = [dictnary allKeys];
+    [_faqArray removeAllObjects];
+    for (NSString *question in allQuestions) {
+        FAQItem *objFaq = [[FAQItem alloc]init];
+        objFaq.question = question;
+        objFaq.answer = [dictnary valueForKey:question];
+        [_faqArray addObject:objFaq];
+    }
     
 }
 
+#pragma mark FAQ Model Setup with Array Method
+
+-(void)setupFAQWithArray:(NSArray *)question WithAnswer:(NSArray *)answer{
+    [_faqArray removeAllObjects];
+    if (question.count == answer.count) {
+        for (int i =0; i< question.count; i++) {
+            FAQItem *objFaq = [[FAQItem alloc]init];
+            objFaq.question = [question objectAtIndex:i];
+            objFaq.answer = [answer objectAtIndex:i];
+            [_faqArray addObject:objFaq];
+        }
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -57,15 +88,15 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.bookTitles.count;
+    return self.faqArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ExpnadTableViewCell *cell = (id)[tableView dequeueReusableCellWithIdentifier:kBookCellIdentifier];
-    NSString *title = self.bookTitles[indexPath.row];
-    cell.titleLabel.text = title;
-    cell.DescriptionLabel.text = self.faqDescription[title];
+    FAQItem *objFaq = [_faqArray objectAtIndex:indexPath.row];
+    cell.titleLabel.text = objFaq.question;
+    cell.DescriptionLabel.text = objFaq.answer;
     cell.withDetails = [self.expandedIndexPaths containsObject:indexPath];
     return cell;
 }
@@ -88,12 +119,5 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
         [cell animateOpen];
     }
 }
-#pragma mark - Private
 
-- (NSArray *)bookTitles {
-    if (!_faqTitles) {
-        _faqTitles = [self.faqDescription allKeys];
-    }
-    return _faqTitles;
-}
 @end
