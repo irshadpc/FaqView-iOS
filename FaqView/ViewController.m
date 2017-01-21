@@ -47,6 +47,8 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
                               };
     }
 
+    
+    
     [self setupFAQWithDictinary:_faqDescription];
 }
 
@@ -107,16 +109,35 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if ([self.expandedIndexPaths containsObject:indexPath]) {
+        
         ExpnadTableViewCell *cell = (id)[tableView cellForRowAtIndexPath:indexPath];
         [cell animateClosed];
         [self.expandedIndexPaths removeObject:indexPath];
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     } else {
-        [self.expandedIndexPaths addObject:indexPath];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         
-        ExpnadTableViewCell *cell = (id)[tableView cellForRowAtIndexPath:indexPath];
-        [cell animateOpen];
+        if (self.expandedIndexPaths.allObjects.count > 0) {
+            
+            NSIndexPath *removeExisting = self.expandedIndexPaths.allObjects[0];
+            ExpnadTableViewCell *cell = (id)[tableView cellForRowAtIndexPath:removeExisting];
+            [cell animateClosed];
+            [self.expandedIndexPaths removeObject:removeExisting];
+            [tableView reloadRowsAtIndexPaths:@[removeExisting] withRowAnimation:UITableViewRowAnimationNone];
+            [self.expandedIndexPaths addObject:indexPath];
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            
+            cell = (id)[tableView cellForRowAtIndexPath:indexPath];
+            [cell animateOpen];
+        }
+        else{
+            [self.expandedIndexPaths addObject:indexPath];
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            
+            ExpnadTableViewCell *cell = (id)[tableView cellForRowAtIndexPath:indexPath];
+            [cell animateOpen];
+        }
+        
+      
     }
 }
 
