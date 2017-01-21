@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
-
+@property (nonatomic, weak, readonly) UITableView *tableView;
 @end
 

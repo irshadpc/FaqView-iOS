@@ -16,6 +16,8 @@
 		34E9590A1E335ABE002EDAD7 /* FaqViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959091E335ABE002EDAD7 /* FaqViewTests.m */; };
 		34E959151E335ABE002EDAD7 /* FaqViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959141E335ABE002EDAD7 /* FaqViewUITests.m */; };
 		34E959251E335D5B002EDAD7 /* UIView+Fold.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959241E335D5B002EDAD7 /* UIView+Fold.m */; };
+		34E959281E33626E002EDAD7 /* ExpnadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */; };
+		34E9592A1E336310002EDAD7 /* ExpnadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		34E959161E335ABE002EDAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34E959231E335D5B002EDAD7 /* UIView+Fold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Fold.h"; sourceTree = "<group>"; };
 		34E959241E335D5B002EDAD7 /* UIView+Fold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Fold.m"; sourceTree = "<group>"; };
+		34E959261E33626E002EDAD7 /* ExpnadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpnadTableViewCell.h; sourceTree = "<group>"; };
+		34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpnadTableViewCell.m; sourceTree = "<group>"; };
+		34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpnadTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,9 @@
 			children = (
 				34E959231E335D5B002EDAD7 /* UIView+Fold.h */,
 				34E959241E335D5B002EDAD7 /* UIView+Fold.m */,
+				34E959261E33626E002EDAD7 /* ExpnadTableViewCell.h */,
+				34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */,
+				34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */,
 			);
 			name = FAQ;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E9592A1E336310002EDAD7 /* ExpnadTableViewCell.xib in Resources */,
 				34E958FF1E335ABE002EDAD7 /* LaunchScreen.storyboard in Resources */,
 				34E958FC1E335ABE002EDAD7 /* Assets.xcassets in Resources */,
 				34E958FA1E335ABE002EDAD7 /* Main.storyboard in Resources */,
@@ -289,6 +298,7 @@
 				34E958F71E335ABE002EDAD7 /* ViewController.m in Sources */,
 				34E959251E335D5B002EDAD7 /* UIView+Fold.m in Sources */,
 				34E958F41E335ABE002EDAD7 /* AppDelegate.m in Sources */,
+				34E959281E33626E002EDAD7 /* ExpnadTableViewCell.m in Sources */,
 				34E958F11E335ABE002EDAD7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

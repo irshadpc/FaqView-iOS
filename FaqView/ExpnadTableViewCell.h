@@ -10,8 +10,8 @@
 
 @interface ExpnadTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *bookTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bookDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *DescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIView *detailContainerView;
 
 @property (nonatomic, assign) BOOL withDetails;

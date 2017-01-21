@@ -28,7 +28,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="g3o-US-0dI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,7 +58,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5c7-hJ-i0d" firstAttribute="top" secondItem="kkR-oJ-4ta" secondAttribute="top" priority="998" constant="20" symbolic="YES" id="6EU-nE-c3S"/>
                             <constraint firstItem="5c7-hJ-i0d" firstAttribute="leading" secondItem="kkR-oJ-4ta" secondAttribute="leading" constant="20" symbolic="YES" id="9Fu-kn-2p3"/>
@@ -87,11 +86,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
-                <outlet property="bookDescriptionLabel" destination="5c7-hJ-i0d" id="bes-N2-WP2"/>
-                <outlet property="bookTitleLabel" destination="XjC-Ns-EE7" id="RW9-HG-tYb"/>
+                <outlet property="DescriptionLabel" destination="5c7-hJ-i0d" id="5Rb-Ao-MdH"/>
                 <outlet property="detailContainerView" destination="kkR-oJ-4ta" id="qmq-d4-js5"/>
                 <outlet property="detailContainerViewHeightConstraint" destination="wkS-ur-ulV" id="Tv0-rd-5Wq"/>
                 <outlet property="titleContainer" destination="XIV-kN-ju0" id="VUt-wb-fgb"/>
+                <outlet property="titleLabel" destination="XjC-Ns-EE7" id="iBT-V0-YTo"/>
             </connections>
             <point key="canvasLocation" x="236" y="446.5"/>
         </tableViewCell>
