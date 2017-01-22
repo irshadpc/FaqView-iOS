@@ -15,12 +15,11 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 @interface FAQViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDictionary *faqDescription;
-@property (strong, nonatomic) NSArray *faqTitles;
-@property (strong, nonatomic) NSMutableArray *faqArray;
 @property (strong, nonatomic) NSMutableSet *expandedIndexPaths;
 @end
 
 @implementation FAQViewController
+@synthesize faqArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +33,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    _faqArray = [[NSMutableArray alloc]init];
+    faqArray = [[NSMutableArray alloc]init];
     self.title = @"FAQ View";
   
     if (!_faqDescription) {
@@ -57,12 +56,12 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 -(void)setupFAQWithDictinary:(NSDictionary *)dictnary{
     
     NSArray *allQuestions = [dictnary allKeys];
-    [_faqArray removeAllObjects];
+    [faqArray removeAllObjects];
     for (NSString *question in allQuestions) {
         FAQItem *objFaq = [[FAQItem alloc]init];
         objFaq.question = question;
         objFaq.answer = [dictnary valueForKey:question];
-        [_faqArray addObject:objFaq];
+        [faqArray addObject:objFaq];
     }
     
 }
@@ -70,13 +69,13 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 #pragma mark FAQ Model Setup with Array Method
 
 -(void)setupFAQWithArray:(NSArray *)question WithAnswer:(NSArray *)answer{
-    [_faqArray removeAllObjects];
+    [faqArray removeAllObjects];
     if (question.count == answer.count) {
         for (int i =0; i< question.count; i++) {
             FAQItem *objFaq = [[FAQItem alloc]init];
             objFaq.question = [question objectAtIndex:i];
             objFaq.answer = [answer objectAtIndex:i];
-            [_faqArray addObject:objFaq];
+            [faqArray addObject:objFaq];
         }
     }
     
@@ -96,7 +95,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ExpnadTableViewCell *cell = (id)[tableView dequeueReusableCellWithIdentifier:kBookCellIdentifier];
-    FAQItem *objFaq = [_faqArray objectAtIndex:indexPath.row];
+    FAQItem *objFaq = [faqArray objectAtIndex:indexPath.row];
     cell.titleLabel.text = objFaq.question;
     cell.DescriptionLabel.text = objFaq.answer;
     cell.withDetails = [self.expandedIndexPaths containsObject:indexPath];
@@ -140,5 +139,6 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
       
     }
 }
+
 
 @end

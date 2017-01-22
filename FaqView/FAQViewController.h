@@ -11,5 +11,6 @@
 @interface FAQViewController : UIViewController
 
 @property (nonatomic, weak, readonly) UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *faqArray;
 @end
 
