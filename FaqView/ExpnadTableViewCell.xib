@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIV-kN-ju0" userLabel="Title Container">
@@ -32,23 +32,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ER-Fy-6VR">
-                                <rect key="frame" x="286" y="20" width="33" height="30"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.59999999999999998" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Glyph" translatesAutoresizingMaskIntoConstraints="NO" id="VQf-fO-ejs">
+                                <rect key="frame" x="281" y="25" width="20" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="33" id="Lrp-sX-HVy"/>
+                                    <constraint firstAttribute="height" constant="17" id="Div-Dd-Dl7"/>
+                                    <constraint firstAttribute="width" constant="20" id="GY9-ss-pVg"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VQf-fO-ejs" secondAttribute="trailing" constant="19" id="49o-XR-J1Y"/>
                             <constraint firstItem="XjC-Ns-EE7" firstAttribute="leading" secondItem="XIV-kN-ju0" secondAttribute="leading" constant="20" symbolic="YES" id="4Mr-pw-mxJ"/>
-                            <constraint firstItem="9ER-Fy-6VR" firstAttribute="top" secondItem="XjC-Ns-EE7" secondAttribute="top" id="7nj-Sc-G7d"/>
                             <constraint firstAttribute="centerY" secondItem="XjC-Ns-EE7" secondAttribute="centerY" id="DZ2-be-7W2"/>
                             <constraint firstItem="XjC-Ns-EE7" firstAttribute="top" secondItem="XIV-kN-ju0" secondAttribute="top" constant="20" symbolic="YES" id="OFV-mG-0uN"/>
                             <constraint firstAttribute="bottom" secondItem="XjC-Ns-EE7" secondAttribute="bottom" constant="20" symbolic="YES" id="PQk-7e-Piq"/>
-                            <constraint firstAttribute="trailing" secondItem="9ER-Fy-6VR" secondAttribute="trailing" constant="1" id="baa-kh-DU4"/>
+                            <constraint firstItem="VQf-fO-ejs" firstAttribute="top" secondItem="XIV-kN-ju0" secondAttribute="top" constant="25" id="Tg5-3d-KjH"/>
                             <constraint firstAttribute="trailing" secondItem="XjC-Ns-EE7" secondAttribute="trailing" constant="20" symbolic="YES" id="yms-43-xvG"/>
                         </constraints>
                         <variation key="default">
@@ -99,10 +98,14 @@
                 <outlet property="DescriptionLabel" destination="5c7-hJ-i0d" id="5Rb-Ao-MdH"/>
                 <outlet property="detailContainerView" destination="kkR-oJ-4ta" id="qmq-d4-js5"/>
                 <outlet property="detailContainerViewHeightConstraint" destination="wkS-ur-ulV" id="Tv0-rd-5Wq"/>
+                <outlet property="imageIcon" destination="VQf-fO-ejs" id="6VB-ek-sFg"/>
                 <outlet property="titleContainer" destination="XIV-kN-ju0" id="VUt-wb-fgb"/>
                 <outlet property="titleLabel" destination="XjC-Ns-EE7" id="iBT-V0-YTo"/>
             </connections>
             <point key="canvasLocation" x="236" y="446.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Expand Glyph" width="31" height="20"/>
+    </resources>
 </document>

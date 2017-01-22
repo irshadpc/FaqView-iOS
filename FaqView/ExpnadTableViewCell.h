@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *DescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIView *detailContainerView;
+@property (weak, nonatomic) IBOutlet UIButton *buttonIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *imageIcon;
 
 @property (nonatomic, assign) BOOL withDetails;
 
