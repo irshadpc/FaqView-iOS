@@ -6,13 +6,13 @@
 //  Copyright © 2017 IRSHAD PC. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FAQViewController.h"
 #import "ExpnadTableViewCell.h"
 #import "FAQItem.h"
 
 static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 
-@interface ViewController ()
+@interface FAQViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDictionary *faqDescription;
 @property (strong, nonatomic) NSArray *faqTitles;
@@ -20,7 +20,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
 @property (strong, nonatomic) NSMutableSet *expandedIndexPaths;
 @end
 
-@implementation ViewController
+@implementation FAQViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,14 +36,14 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     _faqArray = [[NSMutableArray alloc]init];
     self.title = @"FAQ View";
-    
+  
     if (!_faqDescription) {
         _faqDescription = @{
                               @"What is reddit?": @"reddit is a source for what's new and popular on the web. Users like you provide all of the content and decide, through voting, what's good and what's junk. Links that receive community approval bubble up towards #1, so the front page is constantly in motion and (hopefully) filled with fresh, interesting links.",
                               @"A Tale of Two Cities": @"It was the best of times, when Mr. Dickens loved rhymes.",
                               @"A Tree Grows in Brooklyn": @"Also, a young author grows up in Brooklyn.",
                               @"Test expand and collapse table view" : @"This sample project shows how to implement Expandable/Collapsable TableView in iOS.",
-                              @"Great Gatsby" : @"The book that inspired thousands of obliviously themed parties!",
+                              @"reddit is a source for what's new and popular on the web. Users like you provide all of the content and decide, through voting, what's good and what's junk. Links that receive community approval bubble up towards #1, so the front page is constantly in motion and (hopefully) filled with fresh, interesting links." : @"The book that inspired thousands of obliviously themed parties!",
                               };
     }
 

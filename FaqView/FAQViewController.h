@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FAQViewController : UIViewController
 
 @property (nonatomic, weak, readonly) UITableView *tableView;
 @end
