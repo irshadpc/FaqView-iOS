@@ -16,4 +16,4 @@ Feature requests, bug reports, and pull requests are all welcome.
 
 ## License
 
-Copyright (c) 2016-present Irshad PC. Release under the [MIT License](License).
+Copyright (c) 2016-present Irshad PC. Release under the [MIT License](https://github.com/irshadpc/FaqView-iOS/blob/master/LICENSE).
