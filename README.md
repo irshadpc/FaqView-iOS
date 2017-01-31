@@ -3,8 +3,8 @@ FAQ view for iOS written in Objective
 
 ## Requirements
 
-- Xcode 8.2
-- iOS 10
+- Xcode 7.3.1
+- iOS 7
 
 ## Author
 
