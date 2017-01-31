@@ -1,4 +1,4 @@
-# FaqView-iOS
+# FaqView-iOS  [![Build Status](https://travis-ci.org/irshadpc/FaqView-iOS.svg?branch=master)](https://travis-ci.org/irshadpc/FaqView-iOS)
 FAQ view for iOS written in Objective
 
 ## Requirements
