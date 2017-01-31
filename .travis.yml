@@ -1,5 +1,4 @@
 language: objective-c
 xcode_project: Faqview.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Faqview
-xcode_sdk: 
 osx_image: xcode8.2
