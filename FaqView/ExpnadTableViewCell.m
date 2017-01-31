@@ -47,9 +47,9 @@
     self.contentView.backgroundColor = [UIColor clearColor];
     [self.detailContainerView foldOpenWithTransparency:YES
                                    withCompletionBlock:^{
-                                       _buttonIcon.imageView.image = [UIImage imageNamed:@"expandGlyphUp"];
-                                       _imageIcon.image = [UIImage imageNamed:@"expandGlyphUp"];
-                                       self.contentView.backgroundColor = originalBackgroundColor;
+                                      // _buttonIcon.imageView.image = [UIImage imageNamed:@"expandGlyphUp"];
+                                        self.contentView.backgroundColor = originalBackgroundColor;
+                                        _imageIcon.image = [UIImage imageNamed:@"expandGlyphUp"];
                                    }];
 }
 
@@ -60,9 +60,9 @@
     self.contentView.backgroundColor = [UIColor clearColor];
     
     [self.detailContainerView foldClosedWithTransparency:YES withCompletionBlock:^{
-        _buttonIcon.imageView.image = [UIImage imageNamed:@"expandGlyph"];
-        _imageIcon.image = [UIImage imageNamed:@"expandGlyph"];
+        //_buttonIcon.imageView.image = [UIImage imageNamed:@"expandGlyph"];
         self.contentView.backgroundColor = originalBackgroundColor;
+        _imageIcon.image = [UIImage imageNamed:@"expandGlyph"];
     }];
 }
 

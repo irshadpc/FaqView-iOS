@@ -115,9 +115,6 @@
 				34E959221E335D39002EDAD7 /* FAQ */,
 				34E958F21E335ABE002EDAD7 /* AppDelegate.h */,
 				34E958F31E335ABE002EDAD7 /* AppDelegate.m */,
-				34E958F51E335ABE002EDAD7 /* FAQViewController.h */,
-				34E958F61E335ABE002EDAD7 /* FAQViewController.m */,
-				34E958F81E335ABE002EDAD7 /* FAQ.storyboard */,
 				34E958FB1E335ABE002EDAD7 /* Assets.xcassets */,
 				34E958FD1E335ABE002EDAD7 /* LaunchScreen.storyboard */,
 				34E959001E335ABE002EDAD7 /* Info.plist */,
@@ -162,6 +159,9 @@
 				34E959261E33626E002EDAD7 /* ExpnadTableViewCell.h */,
 				34E959271E33626E002EDAD7 /* ExpnadTableViewCell.m */,
 				34E959291E336310002EDAD7 /* ExpnadTableViewCell.xib */,
+				34E958F51E335ABE002EDAD7 /* FAQViewController.h */,
+				34E958F61E335ABE002EDAD7 /* FAQViewController.m */,
+				34E958F81E335ABE002EDAD7 /* FAQ.storyboard */,
 			);
 			name = FAQ;
 			sourceTree = "<group>";

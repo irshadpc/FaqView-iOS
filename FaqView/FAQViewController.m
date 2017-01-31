@@ -98,6 +98,7 @@ static NSString * const kBookCellIdentifier = @"ExpandCellIdentifier";
     FAQItem *objFaq = [faqArray objectAtIndex:indexPath.row];
     cell.titleLabel.text = objFaq.question;
     cell.DescriptionLabel.text = objFaq.answer;
+    //cell.imageIcon.image = [UIImage imageNamed:@"expandGlyph"];
     cell.withDetails = [self.expandedIndexPaths containsObject:indexPath];
     return cell;
 }
