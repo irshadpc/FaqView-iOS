@@ -1,4 +1,4 @@
 language: objective-c
-xcode_project: Faqview.xcodeproj # path to your xcodeproj folder
+xcode_project: Faqview/Faqview.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Faqview
 osx_image: xcode7.3
