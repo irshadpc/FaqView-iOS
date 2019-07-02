@@ -8,7 +8,7 @@ FAQ view for iOS written in Objective
 
 ## Author
 
-[Irshad PC](https://twitter.com/irshadpc111)
+[Irshad PC](https://twitter.com/_irshadpc)
 
 ## Contributing
 
